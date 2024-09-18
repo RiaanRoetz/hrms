@@ -3,9 +3,8 @@
 		<ion-content class="ion-padding">
 			<div class="flex h-screen w-screen flex-col justify-center bg-white">
 				<div class="flex flex-col mx-auto gap-3 items-center">
-					<!-- Responsive logo image -->
-					<img src="@/assets/hrms/images/frappe-hr-logo.png" alt="Frappe HR Logo" class="responsive-logo" />
-					<div class="text-3xl font-semibold text-gray-900 text-center">Login to Frappe HR</div>
+					<FrappeHRLogo class="h-8 w-8" />
+					<div class="text-3xl font-semibold text-gray-900 text-center">Login to Altrix One</div>
 				</div>
 
 				<div class="mx-auto mt-10 w-full px-8 sm:w-96">
@@ -36,7 +35,6 @@
 				</div>
 			</div>
 
-			<!-- Other content like reset password and OTP verification -->
 			<Dialog v-model="resetPassword.showDialog">
 				<template #body-title>
 					<h2 class="text-lg font-bold">Reset Password</h2>
@@ -92,6 +90,8 @@ import { IonPage, IonContent } from "@ionic/vue"
 import { inject, reactive, ref } from "vue"
 import { Input, Button, ErrorMessage, Dialog } from "frappe-ui"
 
+import FrappeHRLogo from "@/components/icons/FrappeHRLogo.vue"
+
 const email = ref(null)
 const password = ref(null)
 const errorMessage = ref("")
@@ -133,6 +133,7 @@ async function submit(e) {
 				otp.tmp_id = response.tmp_id
 				otp.verification = response.verification
 			} else {
+				// Don't bother handling impossible OTP setup (e.g. no phone number).
 				window.open("/login?redirect-to=" + encodeURIComponent(window.location.pathname), "_blank")
 			}
 		}
@@ -141,19 +142,3 @@ async function submit(e) {
 	}
 }
 </script>
-
-<style scoped>
-/* Responsive logo image styling */
-.responsive-logo {
-	width: 20vw; /* 20% of the viewport width */
-	max-width: 150px; /* Set a maximum size */
-	height: auto; /* Maintain aspect ratio */
-}
-
-@media (max-width: 640px) {
-	/* For small screens */
-	.responsive-logo {
-		width: 40vw; /* 40% of the viewport width */
-	}
-}
-</style>
