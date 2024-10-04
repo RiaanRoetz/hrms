@@ -12,8 +12,8 @@ app_home = "/app/hr"
 add_to_apps_screen = [
 	{
 		"name": "hrms",
-		"logo": "/assets/hrms/images/frappe-hr-logo.svg",
-		"title": "Frappe HR",
+		"logo": "/assets/hrms/images/frappe-hr-logo.png",
+		"title": "Altrix One HR",
 		"route": "/app/hr",
 		"has_permission": "hrms.hr.utils.check_app_permission",
 	}
