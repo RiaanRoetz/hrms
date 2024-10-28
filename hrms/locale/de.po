@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2024-10-20 09:34+0000\n"
-"PO-Revision-Date: 2024-10-21 13:11\n"
+"PO-Revision-Date: 2024-10-25 15:33\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: German\n"
 "MIME-Version: 1.0\n"
@@ -22,7 +22,7 @@ msgstr ""
 #. field in DocType 'HR Settings'
 #: hrms/hr/doctype/hr_settings/hr_settings.json
 msgid " Unlink Payment on Cancellation of Employee Advance"
-msgstr ""
+msgstr " Aufheben der Zahlungsverknüpfung bei Stornierung des Mitarbeitervorschusses"
 
 #: hrms/hr/report/employee_leave_balance/employee_leave_balance.py:22
 msgid "\"From Date\" can not be greater than or equal to \"To Date\""
@@ -6077,11 +6077,11 @@ msgstr "Personalwesen"
 
 #: hrms/setup.py:59
 msgid "HR & Payroll"
-msgstr ""
+msgstr "Personalwesen und Gehaltsabrechnung"
 
 #: hrms/setup.py:65
 msgid "HR & Payroll Settings"
-msgstr ""
+msgstr "Personal- und Gehaltsabrechnungseinstellungen"
 
 #. Label of a shortcut in the HR Workspace
 #: hrms/hr/workspace/hr/hr.json
@@ -6308,7 +6308,7 @@ msgstr "Hat Zertifikat"
 
 #: hrms/setup.py:215
 msgid "Health Insurance"
-msgstr ""
+msgstr "Krankenversicherung"
 
 #. Label of the health_insurance_name (Data) field in DocType 'Employee Health
 #. Insurance'
@@ -6318,11 +6318,11 @@ msgstr "Krankenversicherung Name"
 
 #: hrms/setup.py:229
 msgid "Health Insurance No"
-msgstr ""
+msgstr "Krankenversicherungsnr."
 
 #: hrms/setup.py:221
 msgid "Health Insurance Provider"
-msgstr ""
+msgstr "Krankenkasse"
 
 #: hrms/hr/notification/training_feedback/training_feedback.html:1
 msgid "Hello"
@@ -7401,7 +7401,7 @@ msgstr "Breite"
 
 #: hrms/hr/doctype/employee_checkin/employee_checkin.py:83
 msgid "Latitude and longitude values are required for checking in."
-msgstr ""
+msgstr "Für das Einchecken sind die Werte für Breiten- und Längengrad erforderlich."
 
 #. Option for the 'Calculate Payroll Working Days Based On' (Select) field in
 #. DocType 'Payroll Settings'
@@ -10329,7 +10329,7 @@ msgstr "Erfordern vollständige Finanzierung"
 
 #: hrms/setup.py:170
 msgid "Required Skills"
-msgstr ""
+msgstr "Erforderliche Fertigkeiten"
 
 #. Label of the required_for_employee_creation (Check) field in DocType
 #. 'Employee Boarding Activity'
@@ -12633,7 +12633,7 @@ msgstr "Einkommensteuer Gesamt"
 
 #: hrms/setup.py:794
 msgid "Total Interest Amount"
-msgstr ""
+msgstr "Gesamtzinsbetrag"
 
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.py:137
 msgid "Total Late Entries"
@@ -13826,7 +13826,7 @@ msgstr "{} Akzeptiert"
 #. Count format of shortcut in the HR Workspace
 #: hrms/hr/workspace/hr/hr.json
 msgid "{} Active"
-msgstr "{} Aktiv"
+msgstr ""
 
 #. Count format of shortcut in the Salary Payout Workspace
 #. Count format of shortcut in the Tax & Benefits Workspace

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2024-10-20 09:34+0000\n"
-"PO-Revision-Date: 2024-10-21 13:11\n"
+"PO-Revision-Date: 2024-10-25 15:33\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Bosnian\n"
 "MIME-Version: 1.0\n"
@@ -13820,7 +13820,7 @@ msgstr "{} Prihvaćeno"
 #. Count format of shortcut in the HR Workspace
 #: hrms/hr/workspace/hr/hr.json
 msgid "{} Active"
-msgstr "{} Aktivan"
+msgstr ""
 
 #. Count format of shortcut in the Salary Payout Workspace
 #. Count format of shortcut in the Tax & Benefits Workspace
