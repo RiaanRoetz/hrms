@@ -1,10 +1,10 @@
 <div align="center">
 	<a href="https://frappe.io/hr">
-		<img src="https://github.com/epiusegs/hrms/blob/dev_global_services_version-15/hrms/public/images/frappe-hr-logo.png" height="128" alt="Frappe HR Logo">
+		<img src="https://github.com/epiusegs/altrixone_resources/blob/master/media/Altrix%20icons-options_Framework.png" height="128">
 	</a>
-	<h2>Altrix One HR & PR</h2>
+	<h2>Altrix One CodeSpace</h2>
 	<p align="center">
-		<p>Open Source, modern, and easy-to-use HR and Payroll Software for all organizations</p>
+		<p>Development Environment Emulator</p>
 	</p>
 
 [![CI](https://github.com/frappe/hrms/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/frappe/hrms/actions/workflows/ci.yml)
