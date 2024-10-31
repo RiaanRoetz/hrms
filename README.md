@@ -2,9 +2,9 @@
 	<a href="https://frappe.io/hr">
 		<img src="https://github.com/epiusegs/altrixone_resources/blob/master/media/Altrix%20icons-options_Framework.png" height="128">
 	</a>
-	<h2>Altrix One CodeSpace</h2>
+	<h2>Altrix One HR</h2>
 	<p align="center">
-		<p>Development Environment Emulator</p>
+		<p>Altrix One HRMS</p>
 	</p>
 
 [![CI](https://github.com/frappe/hrms/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/frappe/hrms/actions/workflows/ci.yml)
