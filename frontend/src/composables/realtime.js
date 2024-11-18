@@ -9,6 +9,11 @@ export function useListUpdate(socket, doctype, callback) {
 			callback(data.name)
 		}
 	})
+	socket.on("hrms:update_resource", (data) => {
+		if (data.type === doctype) {
+			callback(data.name)
+		}
+	})
 }
 
 function subscribe(socket, doctype) {
