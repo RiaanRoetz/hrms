@@ -93,6 +93,15 @@ const registerServiceWorker = async () => {
 	}
 }
 
+const handleRealTimeUpdates = () => {
+	socket.on("update", async (data) => {
+		if (data.type === "employee") {
+			await employeeResource.reload()
+		} else if (data.type === "user") {
+			await userResource.reload()
+		}
+	})
+}
 router.isReady().then(async () => {
 	if (import.meta.env.DEV) {
 		await frappeRequest({
@@ -105,6 +114,7 @@ router.isReady().then(async () => {
 
 	await translationsPlugin.isReady();
 	registerServiceWorker()
+	handleRealTimeUpdates()
 	app.mount("#app")
 })
 
