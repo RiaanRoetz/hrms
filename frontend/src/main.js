@@ -93,27 +93,12 @@ const registerServiceWorker = async () => {
 	}
 }
 
-
 const handleRealTimeUpdates = () => {
 	socket.on("update", async (data) => {
 		if (data.type === "employee") {
 			await employeeResource.reload()
 		} else if (data.type === "user") {
 			await userResource.reload()
-		}
-	})
-
-	socket.on("hrms:expense_update", async () => {
-		let expenseResource = getCachedResource("expense") || getCachedListResource("expense")
-		if (expenseResource) {
-			await expenseResource.reload()
-		}
-	})
-
-	socket.on("hrms:leave_update", async () => {
-		let leaveResource = getCachedResource("leave") || getCachedListResource("leave")
-		if (leaveResource) {
-			await leaveResource.reload()
 		}
 	})
 
