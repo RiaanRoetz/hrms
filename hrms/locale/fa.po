@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
 "POT-Creation-Date: 2024-11-10 09:33+0000\n"
-"PO-Revision-Date: 2024-11-12 19:06\n"
+"PO-Revision-Date: 2024-11-16 19:39\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -2547,7 +2547,7 @@ msgstr " خواص و مراجع کامپوننت"
 #: hrms/payroll/doctype/salary_detail/salary_detail.json
 #: hrms/payroll/doctype/taxable_salary_slab/taxable_salary_slab.json
 msgid "Condition"
-msgstr "وضعیت"
+msgstr ""
 
 #. Label of the configure_component_tab (Tab Break) field in DocType 'Salary
 #. Component'
