@@ -27,5 +27,5 @@ onMounted(() => {
 		console.log("Received update event", data);
 		// For example, you can reload resources or refresh the view
 	});
-})
+});
 </script>
