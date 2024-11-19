@@ -27,13 +27,5 @@ export function initSocket() {
 		}
 	})
 
-	socket.on("hrms:update_resource", async (data) => {
-		if (data.type) {
-			let resource = getCachedResource(data.type) || getCachedListResource(data.type)
-			if (resource) {
-				await resource.reload()
-			}
-		}
-	})
 	return socket
 }
