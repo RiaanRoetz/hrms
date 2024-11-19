@@ -59,19 +59,19 @@ app.provide("$socket", socket)
 app.provide("$dayjs", dayjs)
 
 const registerServiceWorker = async () => {
-	window.frappePushNotification = new FrappePushNotification("hrms")
+	window.frappePushNotification = new FrappePushNotification("hrms");
 
 	if ("serviceWorker" in navigator) {
-		let serviceWorkerURL = "/assets/hrms/frontend/sw.js"
-		let config = ""
+		let serviceWorkerURL = "/assets/hrms/frontend/sw.js";
+		let config = "";
 
 		try {
-			config = await window.frappePushNotification.fetchWebConfig()
+			config = await window.frappePushNotification.fetchWebConfig();
 			serviceWorkerURL = `${serviceWorkerURL}?config=${encodeURIComponent(
 				JSON.stringify(config)
-			)}`
+			)}`;
 		} catch (err) {
-			console.error("Failed to fetch FCM config", err)
+			console.error("Failed to fetch FCM config", err);
 		}
 
 		navigator.serviceWorker
@@ -81,15 +81,31 @@ const registerServiceWorker = async () => {
 			.then((registration) => {
 				if (config) {
 					window.frappePushNotification.initialize(registration).then(() => {
-						console.log("Frappe Push Notification initialized")
-					})
+						console.log("Frappe Push Notification initialized");
+					});
 				}
+				// Listen for updates to the service worker
+				registration.onupdatefound = () => {
+					const installingWorker = registration.installing;
+					installingWorker.onstatechange = () => {
+						if (installingWorker.state === 'installed') {
+							if (navigator.serviceWorker.controller) {
+								// New update available
+								console.log('New content is available; please refresh.');
+								// Optionally, you can prompt the user to refresh the page
+							} else {
+								// Content is cached for offline use
+								console.log('Content is cached for offline use.');
+							}
+						}
+					};
+				};
 			})
 			.catch((err) => {
-				console.error("Failed to register service worker", err)
-			})
+				console.error("Failed to register service worker", err);
+			});
 	} else {
-		console.error("Service worker not enabled/supported by the browser")
+		console.error("Service worker not enabled/supported by the browser");
 	}
 }
 
