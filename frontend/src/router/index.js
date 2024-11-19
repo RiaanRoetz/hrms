@@ -83,5 +83,12 @@ const router = createRouter({
 	history: createWebHistory("/hrms"),
 	routes,
 })
+router.beforeEach(async (to, from, next) => {
+	const socket = app.config.globalProperties.$socket;
 
+	// Trigger a refresh of the necessary resources
+	socket.emit("hrms:refetch_resource", { cache_key: "some_cache_key" });
+
+	next();
+});
 export default router
