@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: contact@frappe.io\n"
-"POT-Creation-Date: 2024-11-10 09:33+0000\n"
-"PO-Revision-Date: 2024-11-16 19:39\n"
+"POT-Creation-Date: 2024-11-24 09:35+0000\n"
+"PO-Revision-Date: 2024-11-30 23:35\n"
 "Last-Translator: contact@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -764,7 +764,7 @@ msgstr "تمام دارایی های تخصیص یافته باید قبل از 
 
 #: hrms/hr/doctype/employee_onboarding/employee_onboarding.py:48
 msgid "All the mandatory tasks for employee creation are not completed yet."
-msgstr "تمام وظایف اجباری برای ایجاد کارمند هنوز تکمیل نشده است."
+msgstr "تمام تسک‌ها اجباری برای ایجاد کارمند هنوز تکمیل نشده است."
 
 #. Label of the allocate_based_on_leave_policy (Check) field in DocType 'Leave
 #. Control Panel'
@@ -787,7 +787,7 @@ msgstr ""
 #. Label of the allocate_on_day (Select) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Allocate on Day"
-msgstr "در روز اختصاص دهید"
+msgstr "اختصاص در روز"
 
 #. Label of the allocated_amount (Currency) field in DocType 'Expense Claim
 #. Advance'
@@ -872,7 +872,7 @@ msgstr "به کاربران اجازه دهید"
 #. 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Allow check-out after shift end time (in minutes)"
-msgstr "اجازه خروج پس از پایان نوبت (به دقیقه)"
+msgstr "اجازه خروج پس از پایان نوبت (بر حسب دقیقه)"
 
 #. Description of the 'Allow Users' (Section Break) field in DocType 'Leave
 #. Block List'
@@ -1093,7 +1093,7 @@ msgstr "هر جزئیات دیگری"
 #. Description of the 'Remarks' (Text) field in DocType 'Appraisal'
 #: hrms/hr/doctype/appraisal/appraisal.json
 msgid "Any other remarks, noteworthy effort that should go in the records"
-msgstr "هر نکته دیگری، تلاش قابل توجهی است که باید در رکوردها ثبت شود"
+msgstr "هر ملاحظات دیگری، تلاش قابل توجهی است که باید در رکوردها ثبت شود"
 
 #. Label of the applicable_after (Int) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
@@ -1810,13 +1810,13 @@ msgstr "پایه و متغیر"
 #. Label of the begin_on (Int) field in DocType 'Employee Boarding Activity'
 #: hrms/hr/doctype/employee_boarding_activity/employee_boarding_activity.json
 msgid "Begin On (Days)"
-msgstr "شروع در (روزها)"
+msgstr "شروع در (بر حسب روز)"
 
 #. Label of the begin_check_in_before_shift_start_time (Int) field in DocType
 #. 'Shift Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "Begin check-in before shift start time (in minutes)"
-msgstr "شروع اعلام حضور قبل از زمان شروع شیفت (در دقیقه)"
+msgstr "شروع اعلام حضور قبل از زمان شروع شیفت (بر حسب دقیقه)"
 
 #. Option for the 'Level' (Select) field in DocType 'Training Event'
 #: hrms/hr/doctype/training_event/training_event.json
@@ -2215,7 +2215,7 @@ msgstr "مطالبه مزایا برای"
 #. Label of the claim_date (Date) field in DocType 'Employee Benefit Claim'
 #: hrms/payroll/doctype/employee_benefit_claim/employee_benefit_claim.json
 msgid "Claim Date"
-msgstr "تاریخ ادعا"
+msgstr "تاریخ مطالبه"
 
 #: frontend/src/views/Home.vue:47
 #: frontend/src/views/expense_claim/Dashboard.vue:17
@@ -2234,13 +2234,13 @@ msgstr "ادعا کرد"
 #: hrms/hr/report/employee_advance_summary/employee_advance_summary.py:69
 #: hrms/payroll/doctype/employee_benefit_claim/employee_benefit_claim.json
 msgid "Claimed Amount"
-msgstr "مبلغ ادعا شده"
+msgstr "مبلغ مطالبه شده"
 
 #. Label of a Card Break in the Expense Claims Workspace
 #: hrms/hr/workspace/expense_claims/expense_claims.json
 #: hrms/overrides/dashboard_overrides.py:84
 msgid "Claims"
-msgstr "ادعاها"
+msgstr "مطالبه‌ها"
 
 #: frontend/src/components/ListFiltersActionSheet.vue:76
 #: hrms/www/jobs/index.html:20 hrms/www/jobs/index.html:351
@@ -3788,7 +3788,7 @@ msgstr ""
 #. Label of the duration (Int) field in DocType 'Employee Boarding Activity'
 #: hrms/hr/doctype/employee_boarding_activity/employee_boarding_activity.json
 msgid "Duration (Days)"
-msgstr "مدت زمان (روزها)"
+msgstr "مدت زمان (بر حسب روز)"
 
 #: hrms/public/js/utils/index.js:208
 msgid "ERROR({0}): {1}"
@@ -5461,7 +5461,7 @@ msgstr "منقضی تخصیص"
 #. 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Expire Carry Forwarded Leaves (Days)"
-msgstr "انقضای مرخصی‌های منتقل شده به دوره بعد (روزها)"
+msgstr "انقضای مرخصی‌های منتقل شده به دوره بعد (بر حسب روز)"
 
 #. Label of the expired (Check) field in DocType 'Leave Allocation'
 #: hrms/hr/doctype/leave_allocation/leave_allocation.json
@@ -5865,7 +5865,7 @@ msgstr "از مبلغ"
 #. Label of the from_date (Date) field in DocType 'Salary Structure Assignment'
 #. Label of the from_date (Date) field in DocType 'Salary Withholding'
 #. Label of the from_date (Date) field in DocType 'Salary Withholding Cycle'
-#: frontend/src/views/attendance/AttendanceRequestList.vue:24
+#: frontend/src/views/attendance/AttendanceRequestList.vue:27
 #: frontend/src/views/attendance/ShiftRequestList.vue:57
 #: hrms/hr/dashboard_chart_source/hiring_vs_attrition_count/hiring_vs_attrition_count.js:15
 #: hrms/hr/doctype/attendance_request/attendance_request.json
@@ -8071,7 +8071,7 @@ msgstr "چرخه را پیوند دهید و KRA را به هدف خود تگ ک
 
 #: hrms/controllers/employee_boarding_controller.py:154
 msgid "Linked Project {} and Tasks deleted."
-msgstr "پروژه پیوند شده {} و وظایف حذف شدند."
+msgstr "پروژه پیوند شده {} و تسک‌ها حذف شدند."
 
 #. Label of the loan (Link) field in DocType 'Salary Slip Loan'
 #: hrms/payroll/doctype/salary_slip_loan/salary_slip_loan.json
@@ -8137,7 +8137,7 @@ msgid "Log Out"
 msgstr ""
 
 #. Label of the log_type (Select) field in DocType 'Employee Checkin'
-#: frontend/src/views/attendance/EmployeeCheckinList.vue:22
+#: frontend/src/views/attendance/EmployeeCheckinList.vue:25
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
 msgid "Log Type"
 msgstr "نوع لاگ"
@@ -8388,7 +8388,7 @@ msgstr "حداکثر مبلغ معافیت"
 #. Label of the max_leaves_allowed (Float) field in DocType 'Leave Type'
 #: hrms/hr/doctype/leave_type/leave_type.json
 msgid "Maximum Leave Allocation Allowed"
-msgstr "حداکثر تخصیص مرخصی مجاز است"
+msgstr "حداکثر تخصیص مرخصی مجاز"
 
 #: hrms/payroll/doctype/employee_benefit_claim/employee_benefit_claim.py:65
 msgid "Maximum amount eligible for the component {0} exceeds {1}"
@@ -8422,7 +8422,7 @@ msgstr "حداکثر مرخصی مجاز در نوع مرخصی {0} {1} است"
 #: hrms/hr/report/monthly_attendance_sheet/monthly_attendance_sheet.js:16
 #: hrms/public/js/salary_slip_deductions_report_filters.js:23
 msgid "May"
-msgstr "ممکن است"
+msgstr "می"
 
 #. Label of the meal_preference (Select) field in DocType 'Travel Itinerary'
 #: hrms/hr/doctype/travel_itinerary/travel_itinerary.json
@@ -8718,7 +8718,7 @@ msgstr "مرخصی های جدید تخصیص داده شد"
 #. Label of the no_of_days (Float) field in DocType 'Leave Control Panel'
 #: hrms/hr/doctype/leave_control_panel/leave_control_panel.json
 msgid "New Leaves Allocated (In Days)"
-msgstr "مرخصی های جدید اختصاص داده شده (در چند روز)"
+msgstr "مرخصی های جدید اختصاص داده شده (بر حسب روز)"
 
 #. Description of the 'Create Shifts After' (Date) field in DocType 'Shift
 #. Assignment Schedule'
@@ -9234,7 +9234,7 @@ msgstr "سایر مالیات ها و هزینه ها"
 
 #: hrms/setup.py:328
 msgid "Others"
-msgstr "دیگران"
+msgstr "سایر"
 
 #. Label of the out_time (Datetime) field in DocType 'Attendance'
 #: hrms/hr/doctype/attendance/attendance.json
@@ -10585,7 +10585,7 @@ msgstr "مزایای باقی مانده (سالانه)"
 #: hrms/hr/doctype/expense_claim/expense_claim.json
 #: hrms/hr/doctype/full_and_final_outstanding_statement/full_and_final_outstanding_statement.json
 msgid "Remark"
-msgstr "تذکر دهید"
+msgstr "ملاحظات"
 
 #. Label of the remarks (Text) field in DocType 'Appraisal'
 #: hrms/hr/doctype/appraisal/appraisal.json
@@ -11317,18 +11317,18 @@ msgstr "همان شرکت بیش از یک بار وارد می شود"
 #: frontend/src/components/ExpenseItems.vue:23
 #: frontend/src/components/ExpensesTable.vue:42
 msgid "Sanctioned"
-msgstr "تحریم شد"
+msgstr "تصویب شده"
 
 #. Label of the sanctioned_amount (Currency) field in DocType 'Expense Claim
 #. Detail'
 #: hrms/hr/doctype/expense_claim_detail/expense_claim_detail.json
 #: hrms/hr/report/unpaid_expense_claim/unpaid_expense_claim.py:21
 msgid "Sanctioned Amount"
-msgstr "مبلغ تحریم شده"
+msgstr "مبلغ تصویب شده"
 
 #: hrms/hr/doctype/expense_claim/expense_claim.py:360
 msgid "Sanctioned Amount cannot be greater than Claim Amount in Row {0}."
-msgstr "مبلغ تحریم شده نمی تواند بیشتر از مبلغ ادعا در ردیف {0} باشد."
+msgstr "مبلغ تصویب شده نمی تواند بیشتر از مبلغ مطالبه در ردیف {0} باشد."
 
 #: frontend/src/components/AttendanceCalendar.vue:118
 #: hrms/hr/doctype/leave_block_list/leave_block_list.js:62
@@ -11754,8 +11754,8 @@ msgstr ""
 #. Label of the shift (Link) field in DocType 'Attendance Request'
 #. Label of the shift (Link) field in DocType 'Employee Attendance Tool'
 #. Label of the shift (Link) field in DocType 'Employee Checkin'
-#: frontend/src/views/attendance/AttendanceRequestList.vue:21
-#: frontend/src/views/attendance/EmployeeCheckinList.vue:28
+#: frontend/src/views/attendance/AttendanceRequestList.vue:24
+#: frontend/src/views/attendance/EmployeeCheckinList.vue:31
 #: hrms/hr/doctype/attendance/attendance.json
 #: hrms/hr/doctype/attendance_request/attendance_request.json
 #: hrms/hr/doctype/employee_attendance_tool/employee_attendance_tool.json
@@ -12015,7 +12015,7 @@ msgstr "مهارت ها"
 #. Checkin'
 #: hrms/hr/doctype/employee_checkin/employee_checkin.json
 msgid "Skip Auto Attendance"
-msgstr "از حضور خودکار صرف نظر کنید"
+msgstr "صرف نظر از حضور غیاب خودکار"
 
 #: hrms/payroll/doctype/salary_structure/salary_structure.py:351
 msgid "Skipping Salary Structure Assignment for the following employees, as Salary Structure Assignment records already exists against them. {0}"
@@ -12460,13 +12460,13 @@ msgstr "دقیقاً سالهای تکمیل شده را در نظر بگیری�
 #: hrms/hr/doctype/employee_separation/employee_separation.js:31
 #: hrms/hr/doctype/expense_claim/expense_claim.json
 msgid "Task"
-msgstr "وظیفه"
+msgstr "تسک"
 
 #. Label of the task_weight (Float) field in DocType 'Employee Boarding
 #. Activity'
 #: hrms/hr/doctype/employee_boarding_activity/employee_boarding_activity.json
 msgid "Task Weight"
-msgstr "وزن وظیفه"
+msgstr "وزن تسک"
 
 #. Name of a Workspace
 #: hrms/payroll/workspace/tax_&_benefits/tax_&_benefits.json
@@ -12659,7 +12659,7 @@ msgstr "زمان بعد از زمان شروع شیفت که ورود به من�
 #. Type'
 #: hrms/hr/doctype/shift_type/shift_type.json
 msgid "The time before the shift end time when check-out is considered as early (in minutes)."
-msgstr "زمان قبل از پایان شیفت زمانی که خروج از خانه زودتر در نظر گرفته می شود (در دقیقه)."
+msgstr "زمان قبل از پایان شیفت زمانی که خروج از خانه زودتر در نظر گرفته می شود (بر حسب دقیقه)."
 
 #. Description of the 'Begin check-in before shift start time (in minutes)'
 #. (Int) field in DocType 'Shift Type'
@@ -12839,7 +12839,7 @@ msgstr "به مبلغ"
 #. Label of the to_date (Date) field in DocType 'Additional Salary'
 #. Label of the to_date (Date) field in DocType 'Salary Withholding'
 #. Label of the to_date (Date) field in DocType 'Salary Withholding Cycle'
-#: frontend/src/views/attendance/AttendanceRequestList.vue:25
+#: frontend/src/views/attendance/AttendanceRequestList.vue:28
 #: frontend/src/views/attendance/ShiftRequestList.vue:58
 #: hrms/hr/dashboard_chart_source/hiring_vs_attrition_count/hiring_vs_attrition_count.js:22
 #: hrms/hr/doctype/attendance_request/attendance_request.json
@@ -13015,7 +13015,7 @@ msgstr "مجموع ساعات صورتحساب"
 #. Claim'
 #: hrms/hr/doctype/expense_claim/expense_claim.json
 msgid "Total Claimed Amount"
-msgstr "کل مبلغ ادعا شده"
+msgstr "کل مبلغ مطالبه شده"
 
 #. Label of the total_declared_amount (Currency) field in DocType 'Employee Tax
 #. Exemption Declaration'
@@ -13185,7 +13185,7 @@ msgstr "مجموع استعفاها"
 #. Claim'
 #: hrms/hr/doctype/expense_claim/expense_claim.json
 msgid "Total Sanctioned Amount"
-msgstr "کل مبلغ تحریم شده"
+msgstr "کل مبلغ تصویب شده"
 
 #. Label of the total_score (Float) field in DocType 'Employee Performance
 #. Feedback'
@@ -13212,7 +13212,7 @@ msgstr "مجموع ساعات کاری"
 
 #: hrms/hr/doctype/expense_claim/expense_claim.py:354
 msgid "Total advance amount cannot be greater than total sanctioned amount"
-msgstr "مبلغ کل پیش پرداخت نمی تواند بیشتر از کل مبلغ تحریمی باشد"
+msgstr "مبلغ کل پیش پرداخت نمی تواند بیشتر از کل مبلغ تصویب شده باشد"
 
 #: hrms/hr/doctype/leave_allocation/leave_allocation.py:72
 msgid "Total allocated leaves are more than maximum allocation allowed for {0} leave type for employee {1} in the period"
@@ -13428,7 +13428,7 @@ msgstr "تاریخ انتقال"
 #. Label of a Card Break in the Expense Claims Workspace
 #: hrms/hr/workspace/expense_claims/expense_claims.json hrms/setup.py:329
 msgid "Travel"
-msgstr "مسافرت رفتن"
+msgstr "سفر"
 
 #. Label of the travel_advance_required (Check) field in DocType 'Travel
 #. Itinerary'
@@ -13818,7 +13818,7 @@ msgstr "سرویس خودرو"
 #: hrms/hr/doctype/vehicle_service_item/vehicle_service_item.json
 #: hrms/hr/workspace/expense_claims/expense_claims.json
 msgid "Vehicle Service Item"
-msgstr "مورد سرویس خودرو"
+msgstr "آیتم سرویس خودرو"
 
 #: hrms/hr/doctype/employee_onboarding/employee_onboarding.js:31
 #: hrms/hr/doctype/employee_onboarding/employee_onboarding.js:40
@@ -13884,7 +13884,7 @@ msgstr "هشدار"
 
 #: hrms/hr/doctype/leave_application/leave_application.py:392
 msgid "Warning: Insufficient leave balance for Leave Type {0} in this allocation."
-msgstr "هشدار: موجودی مرخصی برای نوع مرخصی {0} در این تخصیص کافی نیست."
+msgstr "هشدار: تراز مرخصی برای نوع مرخصی {0} در این تخصیص کافی نیست."
 
 #: hrms/hr/doctype/leave_application/leave_application.py:400
 msgid "Warning: Insufficient leave balance for Leave Type {0}."
