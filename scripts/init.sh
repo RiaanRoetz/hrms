@@ -34,11 +34,7 @@ bench set-redis-socketio-host redis-socketio:6379
 sed -i '/redis/d' ./Procfile
 
 
-bench new-site dev.altrixone \
---mariadb-root-password 123 \
---admin-password admin \
---no-mariadb-socket
-
+bench new-site dev.altrixone --mariadb-user-host-login-scope='%' --admin-password='123' --db-root-username=root --db-root-password='123'
 bench --site dev.altrixone set-config developer_mode 1
 bench --site dev.altrixone clear-cache
 bench use dev.altrixone
