@@ -38,9 +38,9 @@ bench new-site dev.altrixone --mariadb-user-host-login-scope='%' --admin-passwor
 bench --site dev.altrixone set-config developer_mode 1
 bench --site dev.altrixone clear-cache
 bench use dev.altrixone
-bench get-app https://github.com/epiusegs/erpnext --branch dev_altrix_one_develop
-bench get-app https://github.com/epiusegs/payments --branch dev_altrix_one_develop
-bench get-app https://github.com/epiusegs/hrms --branch dev_altrix_one_develop
+bench get-app https://github.com/frappe/erpnext --branch version-15
+bench get-app https://github.com/frappe/payments --branch version-15
+bench get-app https://github.com/frappe/hrms --branch version-15
 bench --site dev.altrixone install-app erpnext
 bench --site dev.altrixone install-app payments
 bench --site dev.altrixone install-app hrms
