@@ -1,7 +1,16 @@
 // Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
 // License: GNU General Public License v3. See license.txt
-
+//Hi die is net n test
 frappe.ui.form.on("Salary Slip", {
+	setup: function (frm) {
+		$.each(["earnings", "deductions"], function (i, table_fieldname) {
+			frm.get_field(table_fieldname).grid.editable_fields = [
+				{ fieldname: "salary_component", columns: 6 },
+				{ fieldname: "amount", columns: 4 },
+			];
+		});
+
+		frappe.ui.form.on("Salary Slip", {
 	setup: function (frm) {
 		$.each(["earnings", "deductions"], function (i, table_fieldname) {
 			frm.get_field(table_fieldname).grid.editable_fields = [
