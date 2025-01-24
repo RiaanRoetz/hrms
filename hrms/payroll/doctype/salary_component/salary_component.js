@@ -54,6 +54,10 @@ frappe.ui.form.on("Salary Component", {
 			frm.set_value("is_tax_applicable", 0);
 			frm.set_value("is_flexible_benefit", 0);
 		}
+		if (frm.doc.type == "Company Contribution") {
+			frm.set_value("is_tax_applicable", 1);
+			frm.set_value("is_flexible_benefit", 1);
+		}
 	},
 
 	variable_based_on_taxable_salary: function (frm) {
@@ -96,9 +100,9 @@ frappe.ui.form.on("Salary Component", {
 										"Salary Component {0} is currently not used in any Salary Structure.",
 										[frm.doc.name.bold()],
 									),
-									title: __("No Salary Structures"),
-									indicator: "orange",
-								});
+								title: __("No Salary Structures"),
+								indicator: "orange",
+							});
 						});
 				},
 				__("Update Salary Structures"),
@@ -144,7 +148,13 @@ frappe.ui.form.on("Salary Component", {
 			const salary_structure = frappe.model.get_new_doc("Salary Structure");
 			const salary_detail = frappe.model.add_child(
 				salary_structure,
-				frm.doc.type === "Earning" ? "earnings" : "deductions",
+				frm.doc.type === "Earning"
+					? "earnings"
+					: frm.doc.type === "Deduction"
+					? "deductions"
+					: frm.doc.type === "Company Contribution"
+					? "company_contribution"
+					: "company_contribution",
 			);
 			salary_detail.salary_component = frm.doc.name;
 			frappe.set_route("Form", "Salary Structure", salary_structure.name);
