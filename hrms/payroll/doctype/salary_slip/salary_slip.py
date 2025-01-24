@@ -144,7 +144,7 @@ class SalarySlip(TransactionBase):
 		if not self.salary_slip_based_on_timesheet:
 			self.get_date_details()
 
-		if not (len(self.get("earnings")) or len(self.get("deductions"))):
+		if not (len(self.get("earnings")) or len(self.get("deductions")) or len(self.get("company_contribution"))):
 			# get details from salary structure
 			self.get_emp_and_working_day_details()
 		else:
@@ -152,6 +152,7 @@ class SalarySlip(TransactionBase):
 
 		self.set_salary_structure_assignment()
 		self.calculate_net_pay()
+		self.calculate_total_employer_cost()
 		self.compute_year_to_date()
 		self.compute_month_to_date()
 		self.compute_component_wise_year_to_date()
@@ -195,6 +196,12 @@ class SalarySlip(TransactionBase):
 		else:
 			self.set_status()
 			self.update_status(self.name)
+
+        # Calculate employer cost (Company Contributions)
+			self.calculate_total_employer_cost()
+  		# Log employer contributions or update relevant fields
+			frappe.msgprint(_("Total Employer Cost (Company Contribution): {0}").format(self.total_company_contribution))
+
 
 			make_loan_repayment_entry(self)
 
@@ -320,6 +327,7 @@ class SalarySlip(TransactionBase):
 		if self.employee:
 			self.set("earnings", [])
 			self.set("deductions", [])
+			self.set("company_contribution", [])
 
 			if not self.salary_slip_based_on_timesheet:
 				self.get_date_details()
@@ -411,6 +419,9 @@ class SalarySlip(TransactionBase):
 			self.add_earning_for_hourly_wages(self, self._salary_structure_doc.salary_component, wages_amount)
 
 		make_salary_slip(self._salary_structure_doc.name, self)
+		# Add company contribution details
+		for contribution in self._salary_structure_doc.get("company_contribution", []):
+			self.update_component_row(contribution, contribution.amount, "company_contribution")
 
 	def get_working_days_details(self, lwp=None, for_preview=0):
 		payroll_settings = frappe.get_cached_value(
@@ -793,6 +804,7 @@ class SalarySlip(TransactionBase):
 
 		if self.salary_structure:
 			self.calculate_component_amounts("deductions")
+			self.calculate_component_amounts("company_contribution")
 
 		set_loan_repayment(self)
 
@@ -803,6 +815,7 @@ class SalarySlip(TransactionBase):
 
 	def set_net_pay(self):
 		self.total_deduction = self.get_component_totals("deductions")
+		self.total_company_contribution = self.get_component_totals("company_contribution")  # Employer costs
 		self.base_total_deduction = flt(
 			flt(self.total_deduction) * flt(self.exchange_rate), self.precision("base_total_deduction")
 		)
@@ -1475,7 +1488,7 @@ class SalarySlip(TransactionBase):
 			self.remove(component_row)
 
 	def set_precision_for_component_amounts(self):
-		for component_type in ("earnings", "deductions"):
+		for component_type in ["earnings", "deductions", "company_contribution"]:
 			for component_row in self.get(component_type):
 				component_row.amount = flt(component_row.amount, component_row.precision("amount"))
 
@@ -1678,7 +1691,7 @@ class SalarySlip(TransactionBase):
 
 					taxable_earnings -= flt(amount - additional_amount)
 					additional_income -= additional_amount
-					amount_exempted_from_income_tax = flt(amount - additional_amount)
+					amount_exempted_from_income_tax += flt(amount - additional_amount)
 
 					if additional_amount and ded.is_recurring_additional_salary:
 						additional_income -= self.get_future_recurring_additional_amount(
@@ -2337,8 +2350,18 @@ def enqueue_email_salary_slips(names) -> None:
 		)
 	)
 
+@frappe.whitelist()
+def calculate_total_employer_cost(self):
+    """Calculate total payroll cost for the employer."""
+    self.total_employer_cost = (
+        flt(self.gross_pay)
+        + flt(self.get("total_company_contribution", 0))
+    )
+
 
 def email_salary_slips(names) -> None:
 	for name in names:
 		salary_slip = frappe.get_doc("Salary Slip", name)
 		salary_slip.email_salary_slip()
+
+
