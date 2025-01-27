@@ -179,15 +179,16 @@
    "options": "Salary Component Account"
   },
   {
-   "depends_on": "eval:doc.is_flexible_benefit != 1 && doc.variable_based_on_taxable_salary != 1",
+   "depends_on": "(eval:doc.is_flexible_benefit != 1 && doc.variable_based_on_taxable_salary != 1)|| ()",
    "fieldname": "condition_and_formula",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "condition",
-   "fieldtype": "Code",
-   "label": "Condition",
-   "options": "PythonExpression"
+    "fieldname": "condition",
+    "fieldtype": "Code",
+    "label": "Condition",
+    "options": "PythonExpression",
+    "depends_on": "eval:doc.type == 'Earning' || doc.type == 'Deduction' || doc.type == 'Company Contribution'"
   },
   {
    "default": "0",
@@ -196,11 +197,11 @@
    "label": "Amount based on formula"
   },
   {
-   "depends_on": "amount_based_on_formula",
-   "fieldname": "formula",
-   "fieldtype": "Code",
-   "label": "Formula",
-   "options": "PythonExpression"
+    "fieldname": "formula",
+    "fieldtype": "Code",
+    "label": "Formula",
+    "options": "PythonExpression",
+    "depends_on": "eval:doc.type == 'Earning' || doc.type == 'Deduction' || doc.type == 'Company Contribution'"
   },
   {
    "depends_on": "eval:doc.amount_based_on_formula!==1",
@@ -241,9 +242,10 @@
    "label": "Is Income Tax Component"
   },
   {
-   "fieldname": "configure_component_tab",
-   "fieldtype": "Tab Break",
-   "label": "Condition & Formula"
+    "fieldname": "configure_component_tab",
+    "fieldtype": "Tab Break",
+    "label": "Condition & Formula",
+    "depends_on": "eval:doc.type == 'Earning' || doc.type == 'Deduction' || doc.type == 'Company Contribution'"
   },
   {
    "fieldname": "overview_tab",

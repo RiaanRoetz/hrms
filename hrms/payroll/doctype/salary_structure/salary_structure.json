@@ -24,8 +24,11 @@
   "salary_component",
   "hour_rate",
   "earning_deduction",
+  "earning",
   "earnings",
+  "deduction",
   "deductions",
+  "companycontribution",
   "company_contribution",
   "conditions_and_formula_variable_and_example",
   "net_pay_detail",
@@ -243,13 +246,28 @@
    "fieldtype": "Table",
    "label": "Company Contribution",
    "options": "Salary Detail"
+  },
+  {
+   "fieldname": "earning",
+   "fieldtype": "Heading",
+   "label": "Earning"
+  },
+  {
+   "fieldname": "deduction",
+   "fieldtype": "Heading",
+   "label": "Deduction"
+  },
+  {
+   "fieldname": "companycontribution",
+   "fieldtype": "Heading",
+   "label": "Company Contribution"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-01-24 10:54:43.827589",
+ "modified": "2025-01-27 08:32:24.192677",
  "modified_by": "Administrator",
  "module": "Payroll",
  "name": "Salary Structure",

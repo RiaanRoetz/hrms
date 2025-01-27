@@ -46,17 +46,21 @@ frappe.ui.form.on("Salary Component", {
 	},
 
 	type: function (frm) {
-		if (frm.doc.type == "Earning") {
+		if (frm.doc.type === "Earning") {
 			frm.set_value("is_tax_applicable", 1);
 			frm.set_value("variable_based_on_taxable_salary", 0);
-		}
-		if (frm.doc.type == "Deduction") {
+			frm.set_df_property("condition", "hidden", 0); // Ensure fields remain visible
+			frm.set_df_property("formula", "hidden", 0);
+		} else if (frm.doc.type === "Deduction") {
 			frm.set_value("is_tax_applicable", 0);
 			frm.set_value("is_flexible_benefit", 0);
-		}
-		if (frm.doc.type == "Company Contribution") {
+			frm.set_df_property("condition", "hidden", 0);
+			frm.set_df_property("formula", "hidden", 0);
+		} else if (frm.doc.type === "Company Contribution") {
 			frm.set_value("is_tax_applicable", 1);
-			frm.set_value("is_flexible_benefit", 1);
+			frm.set_value("variable_based_on_taxable_salary", 0);
+			frm.set_df_property("condition", "hidden", 0); // Ensure fields remain visible
+			frm.set_df_property("formula", "hidden", 0);
 		}
 	},
 
