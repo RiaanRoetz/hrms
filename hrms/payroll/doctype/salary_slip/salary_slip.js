@@ -37,7 +37,7 @@ frappe.ui.form.on("Salary Slip", {
 		frm.set_query("salary_component", "company_contribution", function () {
 			return {
 				filters: {
-					type: "company_contribution",
+					type: "Company Contribution",
 				},
 			};
 		});
